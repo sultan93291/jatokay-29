@@ -2,15 +2,13 @@
 const CommonBanner = ({BannerImg, title, description} : {BannerImg : string, title: string, description: string}) => {
     return (
        <div
-      className="relative w-full h-[765px] rounded-[40px] p-8 flex items-center justify-center overflow-hidden text-center"
+      className="w-full h-[765px] rounded-[40px] p-8 flex items-center justify-center overflow-hidden text-center"
       style={{
         backgroundImage: `url(${BannerImg})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
-      {/* Bottom black overlay */}
-      {/* <div className="absolute bottom-0 left-0 w-full h-2/3 bg-linear-to-t from-black to-transparent"></div> */}
 
       {/* Content */}
       <div className="relative max-w-[55%] mx-auto z-10">

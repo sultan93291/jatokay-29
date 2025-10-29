@@ -44,9 +44,9 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="text-[#FFF] text-[23px] font-bold mb-6">Contact Us</h2>
-                            <p className="text-[#585858] text-xl mb-2.5 hover:underline flex items-center gap-2"><LocationIcon /> 23 Auto Street, Motor City, MC 12345</p>
-                            <p className="text-[#585858] text-xl mb-2.5 hover:underline flex items-center gap-2"><PhoneIcon /> (555) 123-4567</p>
-                            <p className="text-[#585858] text-xl mb-2.5 hover:underline flex items-center gap-2"><EmailIcon /> Info@expertauto.com</p>
+                            <p className="text-[#585858] text-xl mb-2.5 flex items-center gap-2"><div className="text-white"><LocationIcon /></div> 23 Auto Street, Motor City, MC 12345</p>
+                            <p className="text-[#585858] text-xl mb-2.5 flex items-center gap-2"><div className="text-white"><PhoneIcon /></div> (555) 123-4567</p>
+                            <p className="text-[#585858] text-xl mb-2.5 flex items-center gap-2"><div className="text-white"><EmailIcon /></div> Info@expertauto.com</p>
                         </div>
                     </div>
                 </div>
