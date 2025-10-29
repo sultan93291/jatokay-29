@@ -11,7 +11,7 @@ const CommonBanner = ({BannerImg, title, description} : {BannerImg : string, tit
     >
 
       {/* Content */}
-      <div className="relative max-w-[55%] mx-auto z-10">
+      <div className="relative max-w-[55%] mx-auto">
         <h1 className="text-white text-5xl font-bold capitalize">
           {title}
         </h1>
