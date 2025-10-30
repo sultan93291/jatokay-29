@@ -15,18 +15,18 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col xl:flex-row items-start justify-between">
                     <div className="xl:w-[30%]">
-                        <img className="h-[84px] w-[108px]" src={LogoImg} alt="logo image" />
+                        <img className="w-32 h-10 md:w-40 lg:h-[50px] md:h-15" src={LogoImg} alt="logo image" />
                         <p className="text-[#FFF] md:text-xl my-6">Your trusted partner for professional auto repair
                             services. Quality workmanship and honest
                             pricing since 2010.</p>
                         <div className="flex items-center gap-3">
-                            <div className="bg-[#232323] text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <FacebookIcon />
                             </div>
-                            <div className="bg-[#232323] text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <InstagramIcon />
                             </div>
-                            <div className="bg-[#232323] text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <LocationIcon />
                             </div>
                         </div>

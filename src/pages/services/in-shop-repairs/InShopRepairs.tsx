@@ -51,7 +51,7 @@ const InShopRepairs = () => {
                     </p>
 
                     <div className="space-y-6">
-                        <button type="button" className="w-full px-6 py-3 active:scale-95 transition bg-[#E63946] rounded-2xl text-[#FFF] shadow-lg shadow-[#E63946]/30 cursor-pointer">
+                        <button type="button" className="w-full px-6 py-3 active:scale-95 transition bg-[#E63946] hover:bg-[#fa0419] rounded-2xl text-[#FFF] shadow-lg shadow-[#E63946]/30 cursor-pointer">
                             Book Appointment
                         </button>
                         <button type="button" className="px-6 w-full py-3 border-[#E2E2E2] border active:scale-95 transition bg-[#FAFAFA] rounded-2xl text-[#1A1A2E] shadow-lg shadow-[#FAFAFA]/30 cursor-pointer">

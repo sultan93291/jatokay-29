@@ -1,5 +1,6 @@
 import MainLayout from "@/layouts/MainLayout";
 import About from "@/pages/about/about/About";
+import Blog from "@/pages/blog/blog/Blog";
 import Contact from "@/pages/contact/contact/Contact";
 import Financing from "@/pages/financing/financing/Financing";
 import Home from "@/pages/home/home/Home";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/services/in-shop-repairs",
         element: <InShopRepairs />
+      },
+      {
+        path: "/blog",
+        element: <Blog/>
       }
     ],
   }

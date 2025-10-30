@@ -1,5 +1,5 @@
 import LogoImg from "@/assets/images/logo.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { MenuIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -10,6 +10,7 @@ const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const closeDrawer = (() => setIsOpen(false))
+  const [scrolled, setScrolled] = useState(false);
   const navItems = [
     { level: "Home", path: "/" },
     { level: "About Us", path: "/about" },
@@ -25,6 +26,30 @@ const Navbar = () => {
     { level: "Paint and body", path: "/services/paint-and-body" },
   ];
 
+
+
+  // ✅ Detect scroll and toggle navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navigate = useNavigate();
+
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    setIsServicesOpen(false);
+  }
+
   // Close dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -37,11 +62,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="relative w-full z-10">
-      <div className="flex justify-between items-center lg:px-12 md:px-10 px-6 w-full absolute top-8">
+    <nav className={`fixed left-0 w-full z-40 transition-all duration-300 ${scrolled ? "bg-black/40 shadow-md backdrop-blur-md top-0" : "bg-transparent top-8"}`}>
+      <div className="flex justify-between items-center lg:px-12 md:px-10 px-8 w-full py-5">
         {/* Logo */}
         <div>
-          <img className="w-20 lg:w-[104px] lg:h-[88px] h-15" src={LogoImg} alt="logo" />
+          <img className="w-32 h-10 md:w-40 lg:h-[50px] md:h-15" src={LogoImg} alt="logo" />
         </div>
 
         {/* Navigation */}
@@ -87,14 +112,13 @@ const Navbar = () => {
                   )}
                 >
                   {serviceDropdownItems.map((item) => (
-                    <NavLink
+                    <button
                       key={item.level}
-                      to={item.path}
-                      onClick={() => setIsServicesOpen(false)}
-                      className="block text-lg font-bold hover:text-[#E63946] whitespace-nowrap border-b last:border-none last:mb-0 last:pb-0 border-[#D9D9D9] pb-3 mb-3"
+                      onClick={() => handleNavigate(item.path)}
+                      className="block cursor-pointer text-lg font-bold hover:text-[#E63946] whitespace-nowrap border-b last:border-none last:mb-0 last:pb-0 border-[#D9D9D9] pb-3 mb-3"
                     >
                       {item.level}
-                    </NavLink>
+                    </button>
                   ))}
                 </div>
               </div>
@@ -119,7 +143,7 @@ const Navbar = () => {
 
         {/* Button */}
         <div className="lg:block hidden">
-           <BookAppointmentDialog buttonLabel="Book Appointment"/>
+          <BookAppointmentDialog buttonLabel="Book Appointment" />
 
         </div>
         {/* Mobile Menu Button */}
@@ -131,6 +155,11 @@ const Navbar = () => {
         </button>
 
       </div>
+
+
+
+
+
       {/* ✅ Dark Overlay */}
       {
         isOpen && (
@@ -143,10 +172,10 @@ const Navbar = () => {
 
       {/* ✅ Mobile Drawer Working */}
       <div
-        className={`fixed top-0 right-0 h-full w-[260px] bg-[#E63946] shadow-lg z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-screen w-[260px] bg-[#E63946] shadow-lg z-50 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        <div className="flex justify-between items-center p-4 pt-12 border-b border-white/20">
+        <div className="flex justify-between items-center p-4 pt-10 border-b border-white/20">
           <X className="text-xl cursor-pointer text-white" onClick={closeDrawer} />
         </div>
 
@@ -217,6 +246,9 @@ const Navbar = () => {
               </NavLink>
             )
           )}
+        </div>
+        <div className="border mx-4 rounded-3xl flex justify-center items-center border-white hover:shadow-lg">
+          <BookAppointmentDialog buttonLabel="Book Appointment" />
         </div>
       </div>
     </nav >

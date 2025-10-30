@@ -68,7 +68,7 @@ const BookAppointmentDialog = ({
                             </div>
                         </div>
 
-                        <div className="flex justify-between w-full gap-6">
+                        <div className="flex flex-col md:flex-row justify-between w-full gap-6">
                             {/* Phone Number */}
                             <div className="flex-1">
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -115,7 +115,7 @@ const BookAppointmentDialog = ({
                             <h2 className="block text-sm font-medium text-gray-700 mb-2">
                                 Vehicle Details
                             </h2>
-                            <div className="flex gap-4">
+                            <div className="flex flex-col md:flex-row gap-4">
                                 <div className="flex-1">
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
                                         Year
@@ -224,7 +224,7 @@ const BookAppointmentDialog = ({
                         </p>
 
                         {/* Submit Button */}
-                        <button type="submit" className="px-6 w-full py-3 active:scale-95 transition bg-[#E63946] rounded-md text-[#FFF] shadow-lg shadow-[#E63946]/30 cursor-pointer">
+                        <button type="submit" className="px-6 w-full py-3 active:scale-95 transition bg-[#E63946] hover:bg-[#fa0419] rounded-md text-[#FFF] shadow-lg shadow-[#E63946]/30 cursor-pointer">
                             Send Message
                         </button>
                     </form>
