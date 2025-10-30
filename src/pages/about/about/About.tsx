@@ -7,7 +7,7 @@ import OurTeam from "../ourTeam/OurTeam";
 const About = () => {
     return (
         <div>
-            <div className="m-5">
+            <div className="m-2 md:m-3 lg:m-5">
                 <CommonBanner BannerImg={BannerImg} title="Driven by Precision. Powered by Trust." description="We’re car enthusiasts dedicated to keeping your vehicle running. With experience, we make car care simple." />
 
             </div>

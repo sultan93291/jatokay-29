@@ -1,5 +1,6 @@
 import MainLayout from "@/layouts/MainLayout";
 import About from "@/pages/about/about/About";
+import Blog from "@/pages/blog/blog/Blog";
 import Contact from "@/pages/contact/contact/Contact";
 import Financing from "@/pages/financing/financing/Financing";
 import Home from "@/pages/home/home/Home";
@@ -27,19 +28,23 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact />
       },
       {
         path: "/services/mobile-mechanic",
-        element: <MobileMechanic/>
+        element: <MobileMechanic />
       },
       {
         path: "/services/paint-and-body",
-        element: <PainAndBody/>
+        element: <PainAndBody />
       },
       {
         path: "/services/in-shop-repairs",
-        element: <InShopRepairs/>
+        element: <InShopRepairs />
+      },
+      {
+        path: "/blog",
+        element: <Blog/>
       }
     ],
   }
