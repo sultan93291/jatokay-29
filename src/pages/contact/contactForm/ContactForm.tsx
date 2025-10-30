@@ -15,17 +15,17 @@ const ContactForm = () => {
 
 
     return (
-        <div className="flex justify-between gap-12">
+        <div className="flex flex-col lg:flex-row justify-between gap-12">
             <div className="flex-1">
-                <h2 className="text-[32px] text-[#1A1A2E] font-bold">Get in Touch</h2>
-                <p className="text-[#585858] text-lg mt-4">Have a question, need a quote, or want to schedule a service? Our team is here to assist you — quickly, courteously, and whenever you need us.</p>
+                <h2 className="text-xl md:text-2xl lg:text-[28px] xl:text-[32px] text-[#1A1A2E] font-bold">Get in Touch</h2>
+                <p className="text-[#585858] lg:text-lg mt-4">Have a question, need a quote, or want to schedule a service? Our team is here to assist you — quickly, courteously, and whenever you need us.</p>
                 <h2 className="text-[#FFF] text-[23px] font-bold mb-6">Contact Us</h2>
-                <p className="text-[#1A1A2E] text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] w-12 h-12 flex justify-center items-center  text-[#E63946] rounded-2xl"><EmailIcon /></div> Info@expertauto.com</p>
-                <p className="text-[#1A1A2E] text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] w-12 h-12 flex justify-center items-center  text-[#E63946] rounded-2xl"><PhoneIcon /> </div> 1300 572 221</p>
-                <p className="text-[#1A1A2E] text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] w-12 h-12 flex justify-center items-center  text-[#E63946] rounded-2xl"><LocationIcon /></div> 123 Fake Street, New York, NY 10001</p>
+                <p className="text-[#1A1A2E]  text-lg lg:text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><EmailIcon /></div> Info@expertauto.com</p>
+                <p className="text-[#1A1A2E] text-lg lg:text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><PhoneIcon /> </div> 1300 572 221</p>
+                <p className="text-[#1A1A2E] text-lg lg:text-xl mb-4 flex items-center gap-5 "><div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><LocationIcon /></div> 123 Fake Street, New York, NY 10001</p>
             </div>
             <div className="flex-1">
-                <h2 className="text-[32px] text-[#1A1A2E] font-bold mb-4">Contact Form</h2>
+                <h2 className="text-xl md:text-2xl lg:text-[28px] xl:text-[32px] text-[#1A1A2E] font-bold mb-4">Contact Form</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                     {/* Name Fields */}

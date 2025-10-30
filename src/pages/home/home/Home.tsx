@@ -9,7 +9,7 @@ import WhyChooseUs from "../whyChooseUs/WhyChooseUs";
 const Home = () => {
     return (
         <div>
-            <div className="m-5">
+            <div className="m-2 md:m-3 lg:m-5">
                 <Banner />
             </div>
             <div>

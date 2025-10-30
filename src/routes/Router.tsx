@@ -27,19 +27,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact/>
+        element: <Contact />
       },
       {
         path: "/services/mobile-mechanic",
-        element: <MobileMechanic/>
+        element: <MobileMechanic />
       },
       {
         path: "/services/paint-and-body",
-        element: <PainAndBody/>
+        element: <PainAndBody />
       },
       {
         path: "/services/in-shop-repairs",
-        element: <InShopRepairs/>
+        element: <InShopRepairs />
       }
     ],
   }
