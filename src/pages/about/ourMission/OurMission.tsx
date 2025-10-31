@@ -1,6 +1,6 @@
 import ServiceImg from "@/assets/images/Rectangle 46.png"
-import CommonButton from "@/common/CommonButton";
 import { BookMarkIcon, LikeIcon, RedBadgeIcon, StarIcon } from "@/components/svg/SvgIcon";
+import BookAppointmentDialog from "@/shared/BookAppointmentDialog";
 const OurMission = () => {
     return (
         <div>
@@ -18,7 +18,7 @@ const OurMission = () => {
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-6">Locally owned & operated</p>
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-6">10,000+ vehicles serviced</p>
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-14">ASE-certified professionals</p>
-                    <CommonButton name="Explore Services" />
+                    <BookAppointmentDialog buttonLabel="Explore Services"/>
                 </div>
             </div>
 

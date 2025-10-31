@@ -81,7 +81,7 @@ const MobileMechanic = () => {
                         <span className="text-black">Price Range:</span> $129 - $279
                     </p>
 
-                    <div className="space-y-6">
+                    <div className="flex flex-col md:flex-row lg:flex-col items-center justify-center gap-6">
                         <button type="button" className="w-full px-6 py-3 active:scale-95 transition bg-[#E63946] hover:bg-[#fa0419] rounded-2xl text-[#FFF] shadow-lg shadow-[#E63946]/30 cursor-pointer">
                             Book Appointment
                         </button>

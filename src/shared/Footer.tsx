@@ -1,5 +1,6 @@
 import LogoImg from "@/assets/images/logo.png"
 import { EmailIcon, FacebookIcon, InstagramIcon, LocationIcon, PhoneIcon } from "@/components/svg/SvgIcon";
+import BookAppointmentDialog from "./BookAppointmentDialog";
 const Footer = () => {
     return (
         <div className="m-2 md:m-3 lg:m-5 bg-[#1A1A1A] rounded-3xl">
@@ -9,24 +10,33 @@ const Footer = () => {
                         <h2 className="text-[#FFF] text-xl md:text-2xl lg:text-[28px] xl:text-[32px] font-bold">Your Car Deserves the Best Care</h2>
                         <p className="text-[#E0E0E0] lg:text-lg md:mt-4 mt-2">Schedule your next service today and experience the difference of professional auto care</p>
                     </div>
-                    <button type="button" className="px-6 py-3 md:mt-0 mt-4 active:scale-95 transition bg-white rounded-2xl text-[#1A1A2E] shadow-lg shadow-white/30 cursor-pointer">
-                        Book Appointment
-                    </button>
+
+
+                    <BookAppointmentDialog
+                        Button={
+                            <button type="button" className="px-6 py-3 md:mt-0 mt-4 active:scale-95 transition bg-white rounded-2xl text-[#1A1A2E] shadow-lg shadow-white/30 cursor-pointer">
+                                Book Appointment
+                            </button>
+                        }
+                    />
+
+
+
                 </div>
                 <div className="flex flex-col xl:flex-row items-start justify-between">
                     <div className="xl:w-[30%]">
-                        <img className="w-32 h-10 md:w-40 lg:h-[50px] md:h-15" src={LogoImg} alt="logo image" />
+                        <img className="w-32 h-full md:w-34 object-cover" src={LogoImg} alt="logo image" />
                         <p className="text-[#FFF] md:text-xl my-6">Your trusted partner for professional auto repair
                             services. Quality workmanship and honest
                             pricing since 2010.</p>
                         <div className="flex items-center gap-3">
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <FacebookIcon />
                             </div>
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <InstagramIcon />
                             </div>
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <LocationIcon />
                             </div>
                         </div>
@@ -35,11 +45,11 @@ const Footer = () => {
                         <div>
                             <h2 className="text-[#FFF] text-lg md:text-xl lg:text-[23px] font-bold lg:mb-6 mb-4">Quick Actions</h2>
                             <div className="flex flex-col">
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Home</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">About us</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Services</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Testimonial</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Contact</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Home</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/about">About us</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/services/mobile-mechanic">Services</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Testimonial</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/contact">Contact</a>
                             </div>
                         </div>
                         <div>
