@@ -1,5 +1,5 @@
 import LogoImg from "@/assets/images/logo.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { MenuIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -63,11 +63,11 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed left-0 w-full z-40 transition-all duration-300 ${scrolled ? "bg-black/40 shadow-md backdrop-blur-md top-0" : "bg-transparent top-8"}`}>
-      <div className="flex justify-between items-center lg:px-12 md:px-10 px-8 w-full py-5">
+      <div className="flex justify-between items-center lg:px-12 md:px-10 px-8 w-full py-4">
         {/* Logo */}
-        <div>
-          <img className="w-32 h-10 md:w-40 lg:h-[50px] md:h-15" src={LogoImg} alt="logo" />
-        </div>
+        <Link to={'/'}>
+          <img className="w-32 h-full md:w-34 object-cover" src={LogoImg} alt="logo" />
+        </Link>
 
         {/* Navigation */}
         <div className="lg:flex items-start space-x-6 text-white font-medium relative hidden">
@@ -82,7 +82,7 @@ const Navbar = () => {
                 <button
                   className={`flex items-center transition duration-150 ease-in-out hover:text-[#FFF] hover:border-b-2 ${isServicesOpen
                     ? "text-[#FFF] font-bold border-b-2"
-                    : "text-[#D5D5D5]"
+                    : "text-[#D5D5D5] border-b-2 border-transparent"
                     }`}
                   aria-expanded={isServicesOpen}
                   aria-haspopup="true"
@@ -131,7 +131,7 @@ const Navbar = () => {
                     ? "pending"
                     : isActive
                       ? "text-[#FFF] font-bold border-b-2"
-                      : "text-[#D5D5D5]"
+                      : "text-[#D5D5D5] border-b-2 border-transparent"
                   }`
                 }
               >
@@ -147,12 +147,21 @@ const Navbar = () => {
 
         </div>
         {/* Mobile Menu Button */}
-        <button
-          className="block lg:hidden text-white text-2xl"
-          onClick={() => setIsOpen(true)}
-        >
-          <MenuIcon />
-        </button>
+        {isOpen ? (
+          <button
+            className="block lg:hidden text-white text-2xl"
+            onClick={() => setIsOpen(false)}
+          >
+            <X />
+          </button>
+        ) : (
+          <button
+            className="block lg:hidden text-white text-2xl"
+            onClick={() => setIsOpen(true)}
+          >
+            <MenuIcon />
+          </button>
+        )}
 
       </div>
 
@@ -172,26 +181,22 @@ const Navbar = () => {
 
       {/* ✅ Mobile Drawer Working */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[260px] bg-[#E63946] shadow-lg z-50 transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 h-screen w-[260px] bg-[#E63946] shadow-lg z-50 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        <div className="flex justify-between items-center p-4 pt-10 border-b border-white/20">
-          <X className="text-xl cursor-pointer text-white" onClick={closeDrawer} />
-        </div>
-
-        <div className="flex flex-col p-6 gap-5">
+        <div className="flex flex-col p-6 gap-5 pt-12">
           {navItems.map((nav) =>
             nav.path === "/service" ? (
               <div
                 key={nav.level}
                 className="relative"
                 ref={dropdownRef}
-                onMouseEnter={() => setIsServicesOpen(true)}
+                onClick={() => setIsServicesOpen(true)}
               >
                 <button
-                  className={`flex items-center transition duration-150 ease-in-out hover:text-[#FFF] hover:border-b-2 ${isServicesOpen
+                  className={`flex items-center transition duration-150 ease-in-out hover:text-[#FFF] ${isServicesOpen
                     ? "text-[#FFF] font-bold border-b-2"
-                    : "text-[#D5D5D5]"
+                    : "text-[#D5D5D5] border-b-2 border-transparent"
                     }`}
                   aria-expanded={isServicesOpen}
                   aria-haspopup="true"
@@ -220,7 +225,7 @@ const Navbar = () => {
                       <NavLink
                         key={item.level}
                         to={item.path}
-                        onClick={() => setIsServicesOpen(false)}
+                        onClick={() => (setIsServicesOpen(false), closeDrawer())}
                         className="block text-lg font-bold hover:text-[#E63946] whitespace-nowrap border-b last:border-none last:mb-0 last:pb-0 border-[#D9D9D9] pb-3 mb-3"
                       >
                         {item.level}
@@ -233,12 +238,13 @@ const Navbar = () => {
               <NavLink
                 key={nav.level}
                 to={nav.path}
+                onClick={closeDrawer}
                 className={({ isActive, isPending }) =>
-                  `transition duration-150 ease-in-out hover:text-[#FFF] hover:border-b-2 ${isPending
+                  `transition duration-150 ease-in-out hover:text-[#FFF] ${isPending
                     ? "pending"
                     : isActive
                       ? "text-[#FFF] font-bold border-b-2"
-                      : "text-[#D5D5D5]"
+                      : "text-[#D5D5D5] border-b-2 border-transparent"
                   }`
                 }
               >
@@ -247,8 +253,10 @@ const Navbar = () => {
             )
           )}
         </div>
-        <div className="border mx-4 rounded-3xl flex justify-center items-center border-white hover:shadow-lg">
-          <BookAppointmentDialog buttonLabel="Book Appointment" />
+        <div className="flex items-center justify-center">
+          <div onClick={closeDrawer} className="border mx-4 rounded-3xl w-fit p-0.5 flex justify-center items-center border-white hover:shadow-lg bg-[#E63946] hover:bg-[#fa0419]">
+            <BookAppointmentDialog buttonLabel="Book Appointment" />
+          </div>
         </div>
       </div>
     </nav >
