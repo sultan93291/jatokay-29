@@ -18,7 +18,7 @@ const OurMission = () => {
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-6">Locally owned & operated</p>
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-6">10,000+ vehicles serviced</p>
                     <p className="text-[#9C9C9C] text-sm md:text-xl border-l-4 border-[#F2F2F2] pl-6 mb-14">ASE-certified professionals</p>
-                    <BookAppointmentDialog buttonLabel="Explore Services"/>
+                    <BookAppointmentDialog buttonLabel="Book Appointment"/>
                 </div>
             </div>
 
