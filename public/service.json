@@ -88,5 +88,95 @@
                 }
             ]
         }
+    },
+    {
+        "image": "https://i.ibb.co.com/b5G01nnV/service-image-3.png",
+        "svg": "https://i.ibb.co.com/B2w6ZfSC/Frame-1.png",
+        "name": "In Shop Repairs",
+        "description": "A Reliable Battery Is Crucial For Starting Your Car And Powering All Its Gadgets. We'll Check The Battery's Health, The Charging System, And Any Electrical Draws To Ensure A Smooth Start. If You Need A Replacement, We'll Provide A Top-Notch Battery With A Nationwide Warranty!",
+        "what_included": [
+            "Complete battery and charging system test",
+            "Electrical draw testing",
+            "Clean battery terminals and cable connections",
+            "Install new battery with appropriate specifications",
+            "Apply anti-corrosion treatment",
+            "Dispose of old battery properly",
+            "Warranty registration and documentation"
+        ],
+        "why_this_service_matters": "Getting Stuck With A Dead Battery Is Super Annoying And Can Even Be Risky. Keeping An Eye On Your Battery And Swapping It Out When Needed Can Save You From Surprises And Keep Your Car's Electronics Safe From Voltage Issues.",
+        "service_details_card": {
+            "duration": "30 minutes",
+            "price_range": "$129 - $279",
+            "action_buttons": [
+                {
+                    "text": "Book Appointment",
+                    "type": "primary"
+                },
+                {
+                    "text": "Ask a Question",
+                    "type": "secondary"
+                }
+            ]
+        }
+    },
+    {
+        "image": "https://i.ibb.co.com/jZLmjvbC/service-image-2.png",
+        "svg": "https://i.ibb.co.com/d0m004m6/Frame.png",
+        "name": "Paint and body",
+        "description": "A Reliable Battery Is Crucial For Starting Your Car And Powering All Its Gadgets. We'll Check The Battery's Health, The Charging System, And Any Electrical Draws To Ensure A Smooth Start. If You Need A Replacement, We'll Provide A Top-Notch Battery With A Nationwide Warranty!",
+        "what_included": [
+            "Complete battery and charging system test",
+            "Electrical draw testing",
+            "Clean battery terminals and cable connections",
+            "Install new battery with appropriate specifications",
+            "Apply anti-corrosion treatment",
+            "Dispose of old battery properly",
+            "Warranty registration and documentation"
+        ],
+        "why_this_service_matters": "Getting Stuck With A Dead Battery Is Super Annoying And Can Even Be Risky. Keeping An Eye On Your Battery And Swapping It Out When Needed Can Save You From Surprises And Keep Your Car's Electronics Safe From Voltage Issues.",
+        "service_details_card": {
+            "duration": "30 minutes",
+            "price_range": "$129 - $279",
+            "action_buttons": [
+                {
+                    "text": "Book Appointment",
+                    "type": "primary"
+                },
+                {
+                    "text": "Ask a Question",
+                    "type": "secondary"
+                }
+            ]
+        }
+    },
+    {
+        "image": "https://i.ibb.co.com/6JgJVTB2/service-image-1.png",
+        "svg": "https://i.ibb.co.com/0RwyjmHq/Frame-2.png",
+        "name": "Mobile Mechanic",
+        "description": "A Reliable Battery Is Crucial For Starting Your Car And Powering All Its Gadgets. We'll Check The Battery's Health, The Charging System, And Any Electrical Draws To Ensure A Smooth Start. If You Need A Replacement, We'll Provide A Top-Notch Battery With A Nationwide Warranty!",
+        "what_included": [
+            "Complete battery and charging system test",
+            "Electrical draw testing",
+            "Clean battery terminals and cable connections",
+            "Install new battery with appropriate specifications",
+            "Apply anti-corrosion treatment",
+            "Dispose of old battery properly",
+            "Warranty registration and documentation"
+        ],
+        "why_this_service_matters": "Getting Stuck With A Dead Battery Is Super Annoying And Can Even Be Risky. Keeping An Eye On Your Battery And Swapping It Out When Needed Can Save You From Surprises And Keep Your Car's Electronics Safe From Voltage Issues.",
+        "service_details_card": {
+            "duration": "30 minutes",
+            "price_range": "$129 - $279",
+            "action_buttons": [
+                {
+                    "text": "Book Appointment",
+                    "type": "primary"
+                },
+                {
+                    "text": "Ask a Question",
+                    "type": "secondary"
+                }
+            ]
+        }
     }
 ]

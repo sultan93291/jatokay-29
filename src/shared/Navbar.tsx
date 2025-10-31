@@ -46,6 +46,7 @@ const Navbar = () => {
 
 
   const handleNavigate = (path: string) => {
+    console.log(path);
     navigate(path);
     setIsServicesOpen(false);
   }
