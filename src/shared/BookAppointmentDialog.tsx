@@ -4,6 +4,7 @@ import {
     DialogContent,
     DialogTrigger,
 } from "@/components/ui/dialog"
+import type { ReactNode } from "react";
 import { useForm, type FieldValues } from "react-hook-form";
 type TAppointmentFormData = {
     fullName: string;
@@ -18,13 +19,17 @@ type TAppointmentFormData = {
     notes?: string;
 };
 
+interface BookAppointmentDialogProps {
+    Button?: ReactNode
+    buttonLabel?: string
+    prefillData?: Partial<TAppointmentFormData>
+}
+
 const BookAppointmentDialog = ({
+    Button,
     buttonLabel = "Book Appointment",
     prefillData = {},
-}: {
-    buttonLabel?: string;
-    prefillData?: Partial<TAppointmentFormData>;
-}) => {
+}: BookAppointmentDialogProps) => {
 
     const {
         register,
@@ -43,7 +48,11 @@ const BookAppointmentDialog = ({
         <Dialog>
             <form>
                 <DialogTrigger>
-                    <CommonButton name={buttonLabel} />
+                    {Button ? (
+                        Button
+                    ) : (
+                        <CommonButton name={buttonLabel}/>
+                    )}
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[750px] h-[90vh] overflow-y-scroll bg-white">
                     <h2 className="text-[32px] text-[#1A1A2E] font-bold text-center">Book an Appointment</h2>
