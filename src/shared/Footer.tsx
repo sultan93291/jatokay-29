@@ -1,7 +1,22 @@
 import LogoImg from "@/assets/images/logo.png"
 import { EmailIcon, FacebookIcon, InstagramIcon, LocationIcon, PhoneIcon } from "@/components/svg/SvgIcon";
 import BookAppointmentDialog from "./BookAppointmentDialog";
+import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
+
+
+    const navigate = useNavigate();
+
+    const handleTestimonialClick = () => {
+        navigate("/");
+        setTimeout(() => {
+            const section = document.getElementById("testimonial");
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }, 100);
+    };
+
     return (
         <div className="m-2 md:m-3 lg:m-5 bg-[#1A1A1A] rounded-3xl">
             <div className="section-padding-x lg:py-20 py-10">
@@ -45,11 +60,11 @@ const Footer = () => {
                         <div>
                             <h2 className="text-[#FFF] text-lg md:text-xl lg:text-[23px] font-bold lg:mb-6 mb-4">Quick Actions</h2>
                             <div className="flex flex-col">
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Home</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/about">About us</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/services/mobile-mechanic">Services</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Testimonial</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/contact">Contact</a>
+                                <Link className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/">Home</Link>
+                                <Link className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/about">About us</Link>
+                                <Link className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/services/mobile-mechanic">Services</Link>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline cursor-pointer" onClick={handleTestimonialClick}>Testimonial</a>
+                                <Link className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} to="/contact">Contact</Link>
                             </div>
                         </div>
                         <div>

@@ -1,5 +1,5 @@
 import CommonBanner from "@/common/CommonBanner";
-import BannerImg from "@/assets/images/banner image 2.png"
+import BannerImg from "@/assets/images/banner image 3.png"
 import { RightCurveIcon } from "@/components/svg/SvgIcon";
 
 const InShopRepairs = () => {

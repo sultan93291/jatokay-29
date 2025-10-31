@@ -62,7 +62,7 @@ const testimonialData: TTestimonial[] = [
 
 const Testimonial = () => {
     return (
-        <div className="my-15 lg:my-30">
+        <div className="my-15 lg:my-30" id="testimonial">
 
             <style>{`
                     @keyframes marqueeScroll {

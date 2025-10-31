@@ -1,5 +1,5 @@
 import CommonBanner from "@/common/CommonBanner";
-import BannerImg from "@/assets/images/banner image 2.png";
+import BannerImg from "@/assets/images/banner image 3.png";
 import { useEffect, useState } from "react";
 import type { TBlogPost } from "@/type";
 import { ArrowRightUpIcon, CommentIcon, FacebookIcon, InstagramIcon, LinkedInIcon, LinkIcon, UserIcon } from "@/components/svg/SvgIcon";
