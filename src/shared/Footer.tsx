@@ -1,5 +1,6 @@
 import LogoImg from "@/assets/images/logo.png"
 import { EmailIcon, FacebookIcon, InstagramIcon, LocationIcon, PhoneIcon } from "@/components/svg/SvgIcon";
+import BookAppointmentDialog from "./BookAppointmentDialog";
 const Footer = () => {
     return (
         <div className="m-2 md:m-3 lg:m-5 bg-[#1A1A1A] rounded-3xl">
@@ -9,9 +10,18 @@ const Footer = () => {
                         <h2 className="text-[#FFF] text-xl md:text-2xl lg:text-[28px] xl:text-[32px] font-bold">Your Car Deserves the Best Care</h2>
                         <p className="text-[#E0E0E0] lg:text-lg md:mt-4 mt-2">Schedule your next service today and experience the difference of professional auto care</p>
                     </div>
-                    <button type="button" className="px-6 py-3 md:mt-0 mt-4 active:scale-95 transition bg-white rounded-2xl text-[#1A1A2E] shadow-lg shadow-white/30 cursor-pointer">
-                        Book Appointment
-                    </button>
+
+
+                    <BookAppointmentDialog
+                        Button={
+                            <button type="button" className="px-6 py-3 md:mt-0 mt-4 active:scale-95 transition bg-white rounded-2xl text-[#1A1A2E] shadow-lg shadow-white/30 cursor-pointer">
+                                Book Appointment
+                            </button>
+                        }
+                    />
+
+
+
                 </div>
                 <div className="flex flex-col xl:flex-row items-start justify-between">
                     <div className="xl:w-[30%]">
