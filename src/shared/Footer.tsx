@@ -20,13 +20,13 @@ const Footer = () => {
                             services. Quality workmanship and honest
                             pricing since 2010.</p>
                         <div className="flex items-center gap-3">
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <FacebookIcon />
                             </div>
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <InstagramIcon />
                             </div>
-                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white rounded-4xl w-12 h-12 flex justify-center items-center">
+                            <div className="bg-[#232323] hover:bg-white hover:text-black text-white cursor-pointer rounded-4xl w-12 h-12 flex justify-center items-center">
                                 <LocationIcon />
                             </div>
                         </div>
@@ -35,11 +35,11 @@ const Footer = () => {
                         <div>
                             <h2 className="text-[#FFF] text-lg md:text-xl lg:text-[23px] font-bold lg:mb-6 mb-4">Quick Actions</h2>
                             <div className="flex flex-col">
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Home</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">About us</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Services</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Testimonial</a>
-                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Contact</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Home</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/about">About us</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/services/mobile-mechanic">Services</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/">Testimonial</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="/contact">Contact</a>
                             </div>
                         </div>
                         <div>

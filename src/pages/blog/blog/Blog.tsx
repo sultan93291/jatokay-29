@@ -49,10 +49,10 @@ const Blog = () => {
                             <p className="text-[#808080] font-semibold text-base flex items-center gap-1"> <CommentIcon /> <span className="text-[#4D4D4D] ">{blog?.metadata?.comments_count} </span> Comments</p>
                         </div>
                         <div className="flex gap-4">
-                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><FacebookIcon /></div>
-                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><LinkedInIcon /></div>
-                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><InstagramIcon /></div>
-                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center  text-[#E63946] rounded-2xl"><LinkIcon/></div>
+                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center cursor-pointer hover:bg-[#E63946]  text-[#E63946] hover:text-white rounded-2xl"><FacebookIcon /></div>
+                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center cursor-pointer hover:bg-[#E63946]  text-[#E63946] hover:text-white rounded-2xl"><LinkedInIcon /></div>
+                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center cursor-pointer hover:bg-[#E63946]  text-[#E63946] hover:text-white rounded-2xl"><InstagramIcon /></div>
+                            <div className="bg-[#fdeced] md:w-12 w-10 md:h-12 h-10 flex justify-center items-center cursor-pointer hover:bg-[#E63946]  text-[#E63946] hover:text-white rounded-2xl"><LinkIcon/></div>
                         </div>
                     </div>
                 </div>
