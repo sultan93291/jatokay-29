@@ -46,8 +46,8 @@ const Navbar = () => {
 
 
   const handleNavigate = (path: string) => {
-    console.log(path);
     navigate(path);
+    window.scrollTo({ top: 0, behavior: "smooth" })
     setIsServicesOpen(false);
   }
 
@@ -127,6 +127,7 @@ const Navbar = () => {
               <NavLink
                 key={nav.level}
                 to={nav.path}
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className={({ isActive, isPending }) =>
                   `transition duration-150 ease-in-out hover:text-[#FFF] hover:border-b-2 ${isPending
                     ? "pending"
