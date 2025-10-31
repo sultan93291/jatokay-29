@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col xl:flex-row items-start justify-between">
                     <div className="xl:w-[30%]">
-                        <img className="w-32 h-10 md:w-40 lg:h-[50px] md:h-15" src={LogoImg} alt="logo image" />
+                        <img className="w-32 h-full md:w-34 object-cover" src={LogoImg} alt="logo image" />
                         <p className="text-[#FFF] md:text-xl my-6">Your trusted partner for professional auto repair
                             services. Quality workmanship and honest
                             pricing since 2010.</p>
@@ -35,11 +35,11 @@ const Footer = () => {
                         <div>
                             <h2 className="text-[#FFF] text-lg md:text-xl lg:text-[23px] font-bold lg:mb-6 mb-4">Quick Actions</h2>
                             <div className="flex flex-col">
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Home</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">About us</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Services</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Testimonial</a>
-                                <a className="text-[#585858] md:text-xl mb-2.5 hover:underline" href="">Contact</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Home</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">About us</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Services</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Testimonial</a>
+                                <a className="text-[#585858] hover:text-gray-400 md:text-xl mb-2.5 hover:underline" href="">Contact</a>
                             </div>
                         </div>
                         <div>

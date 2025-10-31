@@ -2,6 +2,7 @@ import SectionHeader from "@/common/SectionHeader";
 import type { TService } from "@/type";
 import { ArrowRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const OurServices = () => {
@@ -29,7 +30,7 @@ const OurServices = () => {
                             <div className="flex items-center justify-between lg:gap-12 md:gap-8 gap-4 mt-2">
                                 <p className="text-[#595959] md:block hidden">{service?.description.slice(0,40)}...</p>
                                 <p className="text-[#595959] md:hidden">{service?.description.slice(0,25)}...</p>
-                                <button className="flex items-center gap-2 text-[#1A1A2E] text-sm font-bold cursor-pointer hover:text-[#E63946]">Learn More <ArrowRightIcon/></button>
+                                <Link to={`/services/${service?.name.toLowerCase().split(" ").join("-")}`} className="flex items-center gap-2 text-[#1A1A2E] text-sm font-bold cursor-pointer hover:text-[#E63946]">Learn More <ArrowRightIcon/></Link>
                             </div>
                         </div>
                     )
