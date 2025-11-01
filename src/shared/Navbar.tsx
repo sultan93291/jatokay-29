@@ -13,16 +13,16 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const navItems = [
     { level: "Home", path: "/" },
-    { level: "About Us", path: "/about" },
-    { level: "Service", path: "/service" },
     { level: "Financing", path: "/financing" },
+    { level: "Service", path: "/service" },
     { level: "Blog", path: "/blog" },
+    { level: "About Us", path: "/about" },
     { level: "Contact", path: "/contact" },
   ];
 
   const serviceDropdownItems = [
-    { level: "Mobile Mechanic", path: "/services/mobile-mechanic" },
     { level: "In Shop Repairs", path: "/services/in-shop-repairs" },
+    { level: "Mobile Mechanic", path: "/services/mobile-mechanic" },
     { level: "Paint and body", path: "/services/paint-and-body" },
   ];
 
@@ -116,7 +116,7 @@ const Navbar = () => {
                     <button
                       key={item.level}
                       onClick={() => handleNavigate(item.path)}
-                      className="block cursor-pointer text-lg font-bold hover:text-[#E63946] whitespace-nowrap border-b last:border-none last:mb-0 last:pb-0 border-[#D9D9D9] pb-3 mb-3"
+                      className="block capitalize cursor-pointer text-lg font-bold hover:text-[#E63946] whitespace-nowrap border-b last:border-none last:mb-0 last:pb-0 border-[#D9D9D9] pb-3 mb-3"
                     >
                       {item.level}
                     </button>
